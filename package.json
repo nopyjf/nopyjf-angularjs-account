@@ -6,7 +6,8 @@
   "scripts": {
     "build:local": "npx webpack",
     "start:local": "http-server --gzip -a localhost --port 3000 -c",
-    "lint": "eslint ./src/** --ext .ts"
+    "lint": "eslint ./src/** --ext .ts",
+    "pretty": "prettier --config .prettierrc --write \"./src/**/*.{ts,js}\""
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +18,10 @@
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
     "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "http-server": "^14.1.1",
+    "prettier": "^2.8.3",
     "tslint": "^6.1.3",
     "typescript": "^4.9.4",
     "webpack": "^5.75.0",
