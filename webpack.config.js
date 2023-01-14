@@ -1,4 +1,4 @@
-const path = require('path');
+import { resolve } from 'path';
 
 module.exports = {
   mode: 'development',
@@ -7,6 +7,6 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist'),
-  },
+    path: resolve(__dirname, 'dist')
+  }
 };
