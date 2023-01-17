@@ -1,10 +1,12 @@
 export const Routing = [
   '$routeProvider',
-  function ($routeProvider) {
+  function config($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: require('../feature-landing/index.html')
+        template: '<div>YES I DO</div>'
       })
-      .otherwise('/');
+      .otherwise({
+        redirectTo: '/'
+      });
   }
 ];
