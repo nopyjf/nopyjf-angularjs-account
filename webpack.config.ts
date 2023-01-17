@@ -9,6 +9,10 @@ const config: Configuration = {
   output: {
     filename: '[name].js',
     path: resolve(__dirname, 'dist')
+  },
+  resolve: {
+    modules: ['node_modules'],
+    extensions: ['.ts', '.js']
   }
 };
 
