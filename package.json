@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:local": "npx webpack",
     "start:local": "npx webpack serve",
     "lint": "eslint ./src/** --ext .ts",
     "pretty": "prettier --config .prettierrc --write \"./src/**/*.{ts,js}\""
