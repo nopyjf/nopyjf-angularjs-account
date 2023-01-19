@@ -3,7 +3,7 @@ export const Routing = [
   function config($routeProvider) {
     $routeProvider
       .when('/', {
-        template: '<div>YES I DO</div>'
+        template: '<landing-component></landing-component>'
       })
       .otherwise({
         redirectTo: '/'

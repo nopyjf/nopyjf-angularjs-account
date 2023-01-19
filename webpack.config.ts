@@ -34,6 +34,15 @@ const config: Configuration = {
             loader: 'babel-loader'
           }
         ]
+      },
+      {
+        test: /\.html$/,
+        exclude: /(public)/,
+        use: [
+          {
+            loader: 'file-loader'
+          }
+        ]
       }
     ]
   },
