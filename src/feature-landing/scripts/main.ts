@@ -1,9 +1,9 @@
 import angular from 'angular';
-import { LandingModuleName } from '../../constants/module-constant';
 import LandingComponent from './component';
+import { LandingComponentName, LandingModuleName } from './constants';
 
 const LandingModule = angular
   .module(LandingModuleName, [])
-  .component(LandingComponent.name, LandingComponent.template);
+  .component(LandingComponentName, new LandingComponent());
 
 export default LandingModule;
