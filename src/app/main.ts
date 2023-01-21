@@ -1,10 +1,14 @@
 import angular from 'angular';
-import { Routing } from './routing';
 import LandingModule from '../feature-landing/scripts/main';
-import { AppModuleName, NgRouteName } from './constants';
+import { AppModuleName, NgMaterial, NgRouteName } from './constants';
+import RoutingConfig from './routing-config';
+import ThemingConfig from './theme-config';
 
-const dependencies = [NgRouteName, LandingModule.name];
+const dependencies = [NgRouteName, NgMaterial, LandingModule.name];
 
-const AppModule = angular.module(AppModuleName, dependencies).config(Routing);
+const AppModule = angular
+  .module(AppModuleName, dependencies)
+  .config(RoutingConfig)
+  .config(ThemingConfig);
 
 export default AppModule;
