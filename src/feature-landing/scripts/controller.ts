@@ -1,8 +1,10 @@
-interface LandingController {
+interface ILandingController {
   word: string;
 }
 
-class LandingController implements LandingController {
+class LandingController implements ILandingController {
+  word: string;
+
   constructor() {
     this.word = 'Hello World !';
   }
