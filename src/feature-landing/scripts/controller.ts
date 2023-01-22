@@ -1,12 +1,65 @@
+import Transaction from './model';
+
 interface ILandingController {
-  word: string;
+  transactions: Transaction[];
 }
 
 class LandingController implements ILandingController {
-  word: string;
+  transactions: Transaction[];
 
   constructor() {
-    this.word = 'Hello World !';
+    this.transactions = [
+      {
+        title: 'กระเพราไก่ไข่ดาว',
+        type: 'Food',
+        price: 10.0
+      },
+      {
+        title: 'กระเพราไก่ไข่ดาว',
+        type: 'Food',
+        price: 10.0
+      },
+      {
+        title: 'กระเพราไก่ไข่ดาว',
+        type: 'Food',
+        price: 10.0
+      },
+      {
+        title: 'กระเพราไก่ไข่ดาว',
+        type: 'Food',
+        price: 10.0
+      },
+      {
+        title: 'กระเพราไก่ไข่ดาว',
+        type: 'Food',
+        price: 10.0
+      },
+      {
+        title: 'กระเพราไก่ไข่ดาว',
+        type: 'Food',
+        price: 10.0
+      },
+      {
+        title: 'กระเพราไก่ไข่ดาว',
+        type: 'Food',
+        price: 10.0
+      },
+      {
+        title: 'กระเพราไก่ไข่ดาว',
+        type: 'Food',
+        price: 10.0
+      },
+      {
+        title: 'กระเพราไก่ไข่ดาว',
+        type: 'Food',
+        price: 10.0
+      },
+      {
+        title: 'กระเพราไก่ไข่ดาว',
+        type: 'Food',
+        price: 10.0
+      }
+    ];
   }
 }
 
