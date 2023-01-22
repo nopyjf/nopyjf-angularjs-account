@@ -1,8 +1,5 @@
 const ThemingProvider = ($mdThemingProvider: any) => {
-  $mdThemingProvider
-    .theme('default')
-    .primaryPalette('pink')
-    .accentPalette('orange');
+  $mdThemingProvider.theme('default').primaryPalette('red');
 };
 
 const ThemingConfig = [
