@@ -1,11 +1,5 @@
-import Transaction from './model';
-
-interface ILandingController {
-  transactions: Transaction[];
-}
-
-class LandingController implements ILandingController {
-  transactions: Transaction[];
+class LandingController {
+  transactions = [];
 
   constructor() {
     this.transactions = [

@@ -1,4 +1,4 @@
-const RoutingProvider = ($routeProvider: any) => {
+const RoutingProvider = ($routeProvider) => {
   $routeProvider
     .when('/', {
       template: '<landing-component></landing-component>'

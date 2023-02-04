@@ -1,8 +1,7 @@
-import { IComponentOptions } from 'angular';
 import LandingTemplate from '../templates/main.html';
 import LandingController from './controller';
 
-const LandingComponent: IComponentOptions = {
+const LandingComponent = {
   templateUrl: LandingTemplate,
   controller: LandingController
 };
