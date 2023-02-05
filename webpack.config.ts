@@ -7,7 +7,7 @@ import 'webpack-dev-server';
 const config: Configuration = {
   mode: 'development',
   entry: {
-    main: './src/index.ts'
+    main: './src/index.js'
   },
   output: {
     filename: '[name].js',

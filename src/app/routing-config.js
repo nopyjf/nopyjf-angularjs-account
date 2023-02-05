@@ -1,7 +1,9 @@
+import LandingTemplate from '../feature-landing/templates/main.html';
+
 const RoutingProvider = ($routeProvider) => {
   $routeProvider
     .when('/', {
-      template: '<landing-component></landing-component>'
+      templateUrl: LandingTemplate
     })
     .otherwise({
       redirectTo: '/'

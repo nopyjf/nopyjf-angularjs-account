@@ -1,9 +1,15 @@
 import angular from 'angular';
-import { LandingComponentName, LandingModuleName } from './constants';
-import LandingComponent from './component';
+import {
+  LandingControllerName,
+  LandingModuleName,
+  LandingServiceName
+} from './constants';
+import LandingController from './controller';
+import LandingService from './service';
 
 const LandingModule = angular
   .module(LandingModuleName, [])
-  .component(LandingComponentName, LandingComponent);
+  .controller(LandingControllerName, LandingController)
+  .factory(LandingServiceName, LandingService);
 
 export default LandingModule;
