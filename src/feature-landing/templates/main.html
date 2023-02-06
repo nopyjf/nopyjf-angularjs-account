@@ -1,31 +1,35 @@
 <div ng-controller="LandingController as ctrl" layout="column" layout-fill="">
-  <div layout="column">
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-        <h2 md-truncate="" flex="">NopyJF Account App</h2>
-        <md-button class="md-icon-button" href="https://www.google.com">
-          <md-icon>
-            <span class="material-symbols-outlined">
-              add
-            </span>
-          </md-icon>
-        </md-button>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 md-truncate="" flex="">NopyJF Account App</h2>
+      <md-button class="md-icon-button" href="https://www.google.com">
+        <md-icon>
+          <span class="material-symbols-outlined">
+            add
+          </span>
+        </md-icon>
+      </md-button>
+    </div>
+    </md-toolbar-tools>
+  </md-toolbar>
+  <md-content>
+    <div layout="row">
+      <div flex=""></div>
+      <div flex="">
+        <md-list>
+          <md-list-item class="md-3-line" ng-repeat="item in ctrl.getTransactions()">
+            <div class="md-list-item-text">
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.type }}</p>
+              <span class="md-secondary">
+                {{ item.price | currency: "" }}
+              </span>
+              <md-divider></md-divider>
+            </div>
+          </md-list-item>
+        </md-list>
       </div>
-      </md-toolbar-tools>
-    </md-toolbar>
-    <md-content>
-      <md-list>
-        <md-list-item class="md-3-line" ng-repeat="item in ctrl.service.getTransactions()">
-          <div class="md-list-item-text">
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.type }}</p>
-            <span class="md-secondary">
-              {{ item.price | currency: "" }}
-            </span>
-            <md-divider></md-divider>
-          </div>
-        </md-list-item>
-      </md-list>
-    </md-content>
-  </div>
+      <div flex=""></div>
+    </div>
+  </md-content>
 </div>
