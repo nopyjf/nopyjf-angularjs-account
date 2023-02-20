@@ -7,11 +7,13 @@ import 'webpack-dev-server';
 const config: Configuration = {
   mode: 'development',
   entry: {
-    main: './src/index.js'
+    main: './src/index.js',
+    base: './src/app/main.css'
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    chunkFilename: '[id].css'
   },
   resolve: {
     modules: ['node_modules'],
@@ -46,6 +48,10 @@ const config: Configuration = {
             loader: 'file-loader'
           }
         ]
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       }
     ]
   },

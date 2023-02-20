@@ -6,10 +6,15 @@ class LandingController {
   constructor(LandingService, $mdDialog) {
     this.$mdDialog = $mdDialog;
     this.service = LandingService;
+    this.isEditMode = false;
   }
 
   getTransactions = () => {
     return this.service.getTransactions();
+  };
+
+  getTransaction = (index) => {
+    return this.service.getTransaction(index);
   };
 
   displayDialog = (ev) => {
@@ -32,8 +37,15 @@ class LandingController {
   };
 
   closeDialog = () => {
-    console.log('ASDasd');
     // do nothing
+  };
+
+  updatePrepareDelete = (index, isPrepareDelete) => {
+    this.service.updatePrepareDelete(index, isPrepareDelete);
+  };
+
+  updateEditMode = (isEditMode) => {
+    this.isEditMode = isEditMode;
   };
 }
 

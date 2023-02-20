@@ -2,34 +2,61 @@
   <md-toolbar>
     <div class="md-toolbar-tools">
       <h2 md-truncate="" flex="">NopyJF Account App</h2>
-      <md-button class="md-icon-button" ng-click="ctrl.displayDialog($event)">
+      <md-button
+        class="md-icon-button"
+        ng-hide="ctrl.isEditMode"
+        ng-click="ctrl.displayDialog($event)"
+      >
         <md-icon>
-          <span class="material-symbols-outlined">
-            add
-          </span>
+          <span class="material-symbols-outlined"> add </span>
         </md-icon>
       </md-button>
+      <md-button
+        class="md-icon-button"
+        ng-hide="ctrl.isEditMode"
+        ng-click="ctrl.updateEditMode(true)"
+      >
+        <md-icon>
+          <span class="material-symbols-outlined"> edit </span>
+        </md-icon>
+      </md-button>
+      <md-button
+        ng-show="ctrl.isEditMode"
+        ng-click="ctrl.updateEditMode(false)"
+      >
+        Cancel
+      </md-button>
+      <md-button
+        ng-show="ctrl.isEditMode"
+        ng-click="ctrl.updateEditMode(false)"
+      >
+        Delete
+      </md-button>
     </div>
-    </md-toolbar-tools>
   </md-toolbar>
   <md-content>
     <div layout="row">
-      <div flex=""></div>
       <div flex="">
         <md-list>
-          <md-list-item class="md-3-line" ng-repeat="item in ctrl.getTransactions()">
+          <md-list-item
+            class="md-3-line"
+            ng-repeat="item in ctrl.getTransactions()"
+          >
+            <md-checkbox
+              ng-show="ctrl.isEditMode"
+              ng-model="ctrl.getTransaction($index).isPrepareDelete"
+            ></md-checkbox>
             <div class="md-list-item-text">
               <h3>{{ item.title }}</h3>
               <p>{{ item.type }}</p>
               <span class="md-secondary">
                 {{ item.price | currency: "" }}
               </span>
-              <md-divider></md-divider>
             </div>
+            <md-divider></md-divider>
           </md-list-item>
         </md-list>
       </div>
-      <div flex=""></div>
     </div>
   </md-content>
 </div>
